@@ -54,6 +54,23 @@ row_count = 0
 
 # @TODO: Loop over every row in the sales list object
 
+with open(sales_filepath, 'r') as file:
+    csvwriter = csv.writer(csvfile, delimiter=",")
+    # Write the header as the first row
+    csvwriter.writerow('header')
+    
+    for name in sales:
+        csvwriter.writerow(
+            [
+                name,
+                sales[name]["Line_Item_ID"],
+                sales[name]["Date"],
+                sales[name]["Credit_Card_Number"]
+                sales[name]["Quantity"]
+                sales[name]["Menu_Item"]
+                
+            ]
+        )
 
 
 
