@@ -77,13 +77,14 @@ with open(csvpath, 'r') as csvfile:
     # Read the header row first (skip this step if there is no header)
     header = next(csvreader)
     print(header)
-for row in csvreader:
-    print(row)
-    line_num += 1
-    profitloss.append(int(row[1]))
-    profitloss_sum += int(row[1])
-    profitloss_dates.append(row[0])
-    
+    for row in csvreader:
+        print(row)
+        line_num += 1
+        profitloss.append(int(row[1]))
+        profitloss_sum += int(row[1])
+        profitloss_dates.append(row[0])
+
+        
      # Append the column 'Average' to the header
     header.append("Average")
     # Append the header to the list of records
