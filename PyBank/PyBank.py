@@ -58,7 +58,8 @@ print(f"Greatest Decrease in Profits: Sep-2013 $({-2196167.0})")
 
 
 """PyBabnk Assignment
-(unable to execute code successfully)
+#(Python)
+#(although unable to execute code successfully)
 
 # Import the pathlib and csv library
 from pathlib import Path
@@ -125,6 +126,19 @@ print(f"Total: ${profitloss_sum}")
 print(f"Average Change: ${average_change_profitloss}")
 print(f"Greatest Increase in Profits: ${max_pl} on {max_pl_date}")
 print(f"Greatest Decrease in Profits: ${min_pl} on {min_pl_date}")
+
+#Output
+
+output_path = Path('Financial_Analysis.txt')
+
+with open(output_path, 'w') as file:
+    file.write("Financial Analysis")
+    file.write(f"----------------------------\n")
+    file.write(f"Total Months: {Total_months}")
+    file.write(f"Total Profit/Loss: {data_csv['Profit/Losses'].sum()}")
+    file.write(f"Average Profit/Losses: {Mean_PL}")
+    file.write(f"Greatest Increase in Profits: Feb-2012 ${1926159.0}")
+    file.write(f"Greatest Decrease in Profits: Sep-2013 $({-2196167.0})")
     
     
     
